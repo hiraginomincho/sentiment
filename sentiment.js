@@ -59,7 +59,7 @@ async function classifyTextData(text) {
   const score = predictOut.dataSync()[0];
   predictOut.dispose();
   console.log(score);
-  Sentiment.reportResult(score);
+  Sentiment.reportResult(JSON.stringify(score));
 }
 
 init();
