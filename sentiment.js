@@ -59,7 +59,7 @@ async function predict(text) {
   const score = predictOut.dataSync()[0];
   predictOut.dispose();
   console.log(score);
-  Sentiment.reportResult(JSON.stringify(score));
+  Sentiment.reportResult(score);
 }
 
 init();
