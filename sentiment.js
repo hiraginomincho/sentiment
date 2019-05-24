@@ -44,7 +44,7 @@ function padSequences(sequences) {
   });
 }
 
-async function predict(text) {
+async function classifyTextData(text) {
   const inputText = text.trim().toLowerCase().replace(/(\.|\,|\!)/g, "").split(" ");
   const sequence = inputText.map(word => {
     let currentWordIndex = wordIndex[word] + indexFrom;
