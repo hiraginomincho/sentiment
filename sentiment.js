@@ -44,7 +44,8 @@ function padSequences(sequences) {
   });
 }
 
-async function classifyTextData(text) {
+async function classifyTextData(encodedText) {
+  var text = decodeURIComponent(encodedText);
   const inputText = text.trim().toLowerCase().replace(/(\.|\,|\!)/g, "").split(" ");
   const sequence = inputText.map(word => {
     let currentWordIndex = wordIndex[word] + indexFrom;
